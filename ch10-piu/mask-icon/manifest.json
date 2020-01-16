@@ -1,0 +1,9 @@
+{
+	"modules": {
+		"*": "./example"
+	},
+	"resources": {
+		"*-alpha": "./settings-mask"
+	}
+}
+

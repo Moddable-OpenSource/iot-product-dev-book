@@ -1,0 +1,9 @@
+{
+	"modules": {
+		"*": "./example"
+	},
+	"resources": {
+		"*-color": "./js"
+	}
+}
+

@@ -1,0 +1,42 @@
+{
+	"include": [
+		"$(MODDABLE)/examples/manifest_base.json",
+		"$(MODDABLE)/examples/manifest_piu.json",
+		"$(MODDABLE)/modules/input/expanding-keyboard/horizontal/manifest.json"
+	],
+	"creation": {
+		"stack":485
+	},
+	"defines": {
+		"XS_MODS": 1
+	},
+	"modules": {
+		"*": [
+			"./main",
+			"../../loadmod/*"
+		],
+	},
+	"resources": {
+		"*-alpha": [
+			"./OpenSans-Regular-24",
+			"./OpenSans-Semibold-16"
+		],
+	},
+	"platforms": {
+		"esp": {
+			"config": {
+				"rotation": 90
+			}
+		},
+		"esp32": {
+			"config": {
+				"rotation": 90
+			}
+		}
+	},
+	"strip": [
+		"RegExp",
+		"Proxy",
+		"eval"	
+	]
+}

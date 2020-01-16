@@ -1,0 +1,10 @@
+{
+	"modules": {
+		"*": "./example"
+	},
+	"resources": {
+		"*-color": [
+			"./tiles"
+		]
+	}
+}

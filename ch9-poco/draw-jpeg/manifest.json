@@ -1,0 +1,10 @@
+{
+	"modules": {
+		"*": "./example"
+	},
+	"data": {
+		"*": [
+			"./harvard"
+		]
+	}
+}

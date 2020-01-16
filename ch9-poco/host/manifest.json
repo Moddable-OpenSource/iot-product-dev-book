@@ -1,0 +1,29 @@
+{
+	"include": [
+		"$(MODDABLE)/examples/manifest_base.json",
+		"$(MODDABLE)/examples/manifest_commodetto.json"
+	],
+	"defines": {
+		"XS_MODS": 1
+	},
+	"modules": {
+		"*": [
+			"./main",
+			"../../loadmod/*"
+		],
+		"commodetto/readJPEG": "$(COMMODETTO)/commodettoReadJPEG",
+		"commodetto/BufferOut": "$(COMMODETTO)/commodettoBufferOut",
+		"commodetto/PixelsOut": "$(COMMODETTO)/commodettoPixelsOut"
+	},
+	"resources": {
+		"*-mask": [
+			"./OpenSans-Regular-16",
+			"./OpenSans-Semibold-28"
+		]
+	},
+	"strip": [
+		"RegExp",
+		"Proxy",
+		"eval"
+	]
+}

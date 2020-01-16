@@ -1,0 +1,71 @@
+{
+	"include": [
+		"$(MODDABLE)/examples/manifest_base.json"
+	],
+	"defines": {
+		"XS_MODS": 1
+	},
+	"modules": {
+		"*": [
+			"./main",
+			"../../loadmod/*"
+		],
+		"pins/audioout": "$(MODULES)/pins/i2s/*"
+	},
+	"resources":{
+		"*": [
+			"./bflatmajor",
+			"./tada",
+			"./tick",
+			"./tick-tock",
+			"./ding"
+		]
+	},
+	"platforms": {
+		"esp": {
+			"defines": {
+				"audioOut": {
+					"bitsPerSample": 16,
+					"numChannels": 1,
+					"sampleRate": 11025,
+					"volume_divider": 1,
+					"i2s": {
+						"pdm": 0
+					}
+				}
+			}
+		},
+		"esp32": {
+			"defines": {
+				"audioOut": {
+					"bitsPerSample": 16,
+					"numChannels": 1,
+					"sampleRate": 11025,
+					"volume_divider": 1,
+					"i2s": {
+						"bck_pin": 13,
+						"lr_pin": 12,
+						"dataout_pin": 14,
+						"bitsPerSample": 16
+					}
+				}
+			}
+		},
+		"...": {
+			"error": "Platform not supported"
+		}
+	},
+	"strip": [
+		"Atomics",
+		"BigInt",
+		"eval",
+		"Generator",
+		"Proxy",
+		"Reflect",
+		"RegExp",
+		"Set",
+		"SharedArrayBuffer",
+		"WeakMap",
+		"WeakSet"
+	]
+}

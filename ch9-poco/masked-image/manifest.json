@@ -1,0 +1,11 @@
+{
+	"modules": {
+		"*": "./example"
+	},
+	"resources": {
+		"*": [
+			"./mask_circle",
+			"./train"
+		]
+	}
+}

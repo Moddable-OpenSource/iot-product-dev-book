@@ -1,0 +1,60 @@
+{
+	"include": [
+		"$(MODDABLE)/examples/manifest_base.json",
+		"$(MODDABLE)/examples/manifest_net.json",
+		"$(MODDABLE)/modules/network/mdns/manifest.json",
+		"$(MODDABLE)/modules/crypt/tls.json"
+	],
+	"creation": {
+		"keys": {
+			"available": 37
+		}
+	},
+	"defines": {
+		"XS_MODS": 1
+	},
+	"modules": {
+		"*": [
+			"./main",
+			"../../loadmod/*",
+			"$(MODULES)/network/http/*",
+			"$(MODULES)/network/sntp/*",
+			"$(MODULES)/network/websocket/*",
+			"$(MODULES)/data/base64/*",
+			"$(MODULES)/data/logical/*",
+			"$(MODULES)/crypt/digest/*",
+			"$(MODULES)/crypt/digest/kcl/*",
+			"$(MODULES)/network/mqtt/*"
+		]
+	},
+	"preload": [
+		"http",
+		"sntp",
+		"websocket",
+		"base64",
+		"digest",
+		"logical",
+		"mqtt"
+	],
+	"resources": {
+		"*": [
+			"$(MODULES)/crypt/data/ca107"
+		]
+	},
+	"strip": [
+		"Atomics",
+		"BigInt",
+		"eval",
+		"Function",
+		"Generator",
+		"Map",
+		"Promise",
+		"Proxy",
+		"Reflect",
+		"RegExp",
+		"Set",
+		"SharedArrayBuffer",
+		"WeakMap",
+		"WeakSet"
+	]
+}

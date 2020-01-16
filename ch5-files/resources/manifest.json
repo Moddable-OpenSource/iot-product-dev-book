@@ -1,0 +1,11 @@
+{
+	"modules": {
+		"*": "./example"
+	},
+	"resources": {
+	    "*": [
+	        "./mydata"
+	    ]
+	}
+}
+

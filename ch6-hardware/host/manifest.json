@@ -1,0 +1,49 @@
+{
+	"include": [
+		"$(MODDABLE)/examples/manifest_base.json",
+		"$(MODULES)/pins/digital/manifest.json",
+		"$(MODULES)/pins/digital/monitor/manifest.json",
+		"$(MODULES)/pins/analog/manifest.json",
+		"$(MODULES)/pins/servo/manifest.json",
+		"$(MODULES)/pins/i2c/manifest.json",
+	],
+	"defines": {
+		"XS_MODS": 1,
+	},
+	"modules": {
+		"*": [
+			"./main",
+			"../../loadmod/*",
+		],
+		"pins/pwm": "$(MODULES)/pins/pwm/pwm",
+		"pins/smbus": "$(MODULES)/pins/smbus/smbus",
+	},
+	"platforms": {
+		"esp": {
+			"modules": {
+				"*": "$(MODULES)/pins/pwm/esp/*",
+			},
+			"defines": {
+				"i2c": {
+					"sda_pin": 5,
+					"scl_pin": 4
+				},
+			}
+		},
+		"esp32": {
+			"modules": {
+				"*": "$(MODULES)/pins/pwm/esp32/*",
+			},
+			"defines": {
+				"i2c": {
+					"sda_pin": 21,
+					"scl_pin": 22
+				},
+			}
+		},
+		"...": {
+			"error": "Platform not supported"
+		},
+	},
+	"strip": []
+}

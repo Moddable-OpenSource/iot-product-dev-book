@@ -1,0 +1,59 @@
+{
+	"include": [
+		"$(MODDABLE)/examples/manifest_base.json",
+		"$(MODDABLE)/examples/manifest_net.json",
+		"$(MODDABLE)/modules/files/file/manifest.json",
+	],
+	"defines": {
+		"XS_MODS": 1
+	},
+	"modules": {
+		"*": [
+			"./main",
+			"../../loadmod/*",
+			"$(MODULES)/files/preference/*",
+			"$(MODULES)/files/zip/*",
+			"$(MODULES)/network/http/*",
+		],
+	},
+	"preload": [
+		"preference",
+		"zip",
+		"http",
+	],
+	"platforms": {
+		"esp": {
+			"modules": {
+				"*": [
+					"$(MODULES)/files/preference/esp/*",
+					"$(MODULES)/files/flash/*",
+					"$(MODULES)/files/flash/esp/*",
+				]
+			}
+		},
+		"esp32": {
+			"modules": {
+				"*": [
+					"$(MODULES)/files/preference/esp32/*",
+					"$(MODULES)/files/flash/*",
+					"$(MODULES)/files/flash/esp32/*",
+				]
+			}
+		},
+		"mac": {
+			"modules": {
+				"*": [
+					"$(MODULES)/files/preference/mac/*"
+				]
+			}
+		},
+		"win": {
+			"modules": {
+				"*": [
+					"$(MODULES)/files/preference/win/*"
+				]
+			}
+		}
+	},
+	"strip": []
+}

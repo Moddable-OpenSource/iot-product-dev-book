@@ -1,0 +1,19 @@
+{
+	"modules": {
+		"*": [
+			"./assets",
+			"./example",
+			"./screens"
+		]
+	},
+	"resources": {
+		"*-mask": [
+			"./logo1",
+			"./logo2",
+			"./logo3",
+			"./button-bkg",
+			"./restart-arrow"
+		]
+	}
+}
+

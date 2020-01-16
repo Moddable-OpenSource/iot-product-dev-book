@@ -1,0 +1,13 @@
+{
+	"modules": {
+		"*": "./example"
+	},
+	"resources": {
+		"*-alpha": [
+			"./clock",
+			"./settings",
+			"./sun"
+		]
+	}
+}
+

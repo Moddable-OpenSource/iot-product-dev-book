@@ -1,0 +1,15 @@
+{
+	"include": [
+		"$(MODDABLE)/examples/manifest_base.json"
+	],
+	"defines": {
+		"XS_MODS": 1
+	},
+	"modules": {
+		"*": [
+			"./main",
+			"../../loadmod/*"
+		]
+	},
+	"strip": []
+}
