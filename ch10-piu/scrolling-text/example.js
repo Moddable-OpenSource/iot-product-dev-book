@@ -60,9 +60,9 @@ const sampleVerticalScroller = new Scroller(null, {
             contents: [
                 sampleHeader,
                 grayBar,
-                sampleText,
+                sampleText
             ]
-        }),
+        })
     ],
     active: true,
     Behavior: VerticalScrollerBehavior

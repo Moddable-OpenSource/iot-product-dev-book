@@ -65,7 +65,7 @@ const settingsButton = new Column(null, {
 			top: 0,
 			style: textStyle, 
 			string: "Settings"
-		}),
+		})
 	]
 });
 
@@ -77,7 +77,7 @@ const weatherButton = new Column(null, {
 		}),
 		Label(null, {
 			top: 0, style: textStyle, string: "Weather"
-		}),
+		})
 	]
 });
 
@@ -89,7 +89,7 @@ const timeButton = new Column(null, {
 		}),
 		Label(null, {
 			top: 0, style: textStyle, string: "Time"
-		}),
+		})
 	]
 });
 
@@ -102,7 +102,7 @@ const navBar = new Row(null, {
 		weatherButton, 
 		Content(null, {left: 0, right: 0}),
 		timeButton,
-		Content(null, {left: 0, right: 0}),
+		Content(null, {left: 0, right: 0})
 	]
 });
 

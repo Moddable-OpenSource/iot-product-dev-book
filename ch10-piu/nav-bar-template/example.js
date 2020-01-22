@@ -66,7 +66,7 @@ const Button = Column.template($ => ({
 			top: 0,
 			style: textStyle,
 			string: $.string
-		}),
+		})
 	]
 }));
 
@@ -94,7 +94,7 @@ const navBar = new Row(null, {
 		weatherButton, 
 		Content(null, {left: 0, right: 0}),
 		timeButton,
-		Content(null, {left: 0, right: 0}),
+		Content(null, {left: 0, right: 0})
 	]
 });
 

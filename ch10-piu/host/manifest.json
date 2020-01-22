@@ -5,6 +5,7 @@
 		"$(MODDABLE)/modules/input/expanding-keyboard/horizontal/manifest.json"
 	],
 	"creation": {
+		"static": 35840,
 		"stack":485
 	},
 	"defines": {

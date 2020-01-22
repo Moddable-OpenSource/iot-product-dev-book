@@ -38,8 +38,8 @@ class AppBehavior extends Behavior {
 }
 
 export default new Application(null, {
-	displayListLength: 6904,
-	commandListLength: 2048,
+	displayListLength: 8192,
+	commandListLength: 4096,
 	skin: new Skin({
 		fill: "white"
 	}),

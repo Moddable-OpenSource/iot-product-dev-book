@@ -51,7 +51,7 @@ class KeyboardContainerBehavior extends Behavior {
 
 const KeyboardContainer = Column.template($ => ({
 	left: 0, right: 0, top: 0, bottom: 0,
-	contents:[
+	contents: [
 		KeyboardField($, {
 			anchor: "FIELD",
 			left: 32, right: 0, top: 0, bottom: 0,

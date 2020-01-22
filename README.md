@@ -24,4 +24,4 @@ This repository contains the source code for example apps from *IoT Development 
 
 If you have a question or comment about the examples or content in this book, we recommend you [open an issue](https://github.com/Moddable-OpenSource/iot-product-dev-book/issues) in this repository.
 
-If you're having technical issues with the Moddable SDK—for example installing the SDK, building and flashing examples, or using the debugger—please open an issue in the [Moddable SDK repository](https://github.com/Moddable-OpenSource/moddable/).
+If you're having technical issues with the Moddable SDK—for example installing the SDK, building and flashing examples, or using the debugger—please open an issue in the [Moddable SDK repository](https://github.com/Moddable-OpenSource/moddable/).

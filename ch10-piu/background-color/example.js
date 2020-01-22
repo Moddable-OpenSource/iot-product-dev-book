@@ -59,7 +59,7 @@ const colorScreen = new Container(null, {
 			contents: [
 				new ColorButton(null, { string: "Red" }),
 				new ColorButton(null, { string: "Yellow" }),
-				new ColorButton(null, { string: "Blue" }),
+				new ColorButton(null, { string: "Blue" })
 			]
 		})
 	],

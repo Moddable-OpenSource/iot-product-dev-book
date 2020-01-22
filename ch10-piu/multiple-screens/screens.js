@@ -118,14 +118,14 @@ const HomeScreen = Row.template($ => ({
 		Container($, {
 			anchor: "ICON", skin: ASSETS.buttonBackgroundSkin,
 			contents: [
-				Content($, { skin: ASSETS.restartArrowSkin }),
+				Content($, { skin: ASSETS.restartArrowSkin })
 			],
 			active: true, Behavior: RestartButtonBehavior
 		}),
 		Label($, {
 			anchor: "TEXT", left: 10, style: ASSETS.bigTextStyle, string: "Restart"
 		}),
-		Content($, { left: 0, right: 0 }),
+		Content($, { left: 0, right: 0 })
 	],
 	Behavior: HomeScreenBehavior
 }));
