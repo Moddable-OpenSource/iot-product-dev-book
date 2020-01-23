@@ -7,8 +7,8 @@
 				"maxBytes": 1,
 				"type": "Uint8",
 				"permissions": "read",
-				"properties": "read",
-			},
+				"properties": "read"
+			}
 		}
 	}
 }
