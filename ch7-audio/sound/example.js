@@ -16,5 +16,6 @@ import AudioOut from "pins/audioout";
 import Resource from "Resource";
 
 let speaker = new AudioOut({streams: 1});
-speaker.enqueue(0, AudioOut.Samples, new Resource("bflatmajor.maud"));
+speaker.enqueue(0, AudioOut.Samples, 
+	new Resource("bflatmajor.maud"));
 speaker.start();

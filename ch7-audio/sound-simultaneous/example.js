@@ -17,9 +17,11 @@ import Resource from "Resource";
 import Timer from "timer";
 
 let speaker = new AudioOut({streams: 2});
-speaker.enqueue(0, AudioOut.Samples, new Resource("tick.maud"), Infinity);
+speaker.enqueue(0, AudioOut.Samples, 
+	new Resource("tick.maud"), Infinity);
 speaker.start();
 
 Timer.repeat(() => {
-	speaker.enqueue(1, AudioOut.Samples, new Resource("ding.maud"));
+	speaker.enqueue(1, AudioOut.Samples, 
+		new Resource("ding.maud"));
 }, 5000);
