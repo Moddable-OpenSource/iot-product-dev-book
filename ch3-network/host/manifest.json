@@ -48,7 +48,6 @@
 		"Function",
 		"Generator",
 		"Map",
-		"Promise",
 		"Proxy",
 		"Reflect",
 		"RegExp",
