@@ -31,7 +31,7 @@ class KeyboardContainerBehavior extends Behavior {
 	addKeyboard() {
 		if (1 !== this.data.KEYBOARD.length)
 			this.data.KEYBOARD.add(HorizontalExpandingKeyboard(this.data, {
-				style:keyboardStyle, target:this.data.FIELD, doTransition: true
+				style: keyboardStyle, target: this.data.FIELD, doTransition: true
 			}));
 	}
 	onKeyboardOK(application, string) {
@@ -59,8 +59,8 @@ const KeyboardContainer = Column.template($ => ({
 		}),
 		Container($, {
 			anchor: "KEYBOARD",
-			left: 0, right: 0, bottom: 0, height: 164, 
-		}),
+			left: 0, right: 0, bottom: 0, height: 164
+		})
 	],
 	active: true,
 	Behavior: KeyboardContainerBehavior

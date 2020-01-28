@@ -19,7 +19,7 @@ const maskSettingsTexture = new Texture({
 const maskSettingsSkin = new Skin({ 
     texture: maskSettingsTexture, 
     width: 80, height: 80,
-    color: ["orange", "yellow"],
+    color: ["orange", "yellow"]
 });
 
 class SettingsIconBehavior extends Behavior {
