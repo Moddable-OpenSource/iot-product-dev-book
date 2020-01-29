@@ -39,6 +39,6 @@ server.callback = function(msg, value, etc) {
 	else if (Server.prepareResponse == msg)
 		return {
 			headers: ["Content-Type", "text/plain"],
-			body: `hello`
+			body: `Hello. ${new Date}`
 		};
 }
