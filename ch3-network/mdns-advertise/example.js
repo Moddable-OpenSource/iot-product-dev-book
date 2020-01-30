@@ -18,7 +18,7 @@ import {Server} from "http";
 let httpService = {
 	name: "http",
 	protocol: "tcp",
-	port: 80,
+	port: 80
 };
 
 let mdns = new MDNS({

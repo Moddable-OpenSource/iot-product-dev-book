@@ -12,7 +12,7 @@
 		],
 		"pins/audioout": "$(MODULES)/pins/i2s/*"
 	},
-	"resources":{
+	"resources": {
 		"*": [
 			"./bflatmajor",
 			"./tada",

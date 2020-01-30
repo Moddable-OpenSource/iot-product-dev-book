@@ -20,7 +20,7 @@ import {IOCapability} from "sm";
 class HeartRateService extends BLEServer {
 	onReady() {
 		this.deviceName = "Heart Rate Monitor";
-		this.securityParameters = { bonding:true, mitm:true, ioCapability:IOCapability.DisplayOnly };
+		this.securityParameters = { bonding: true, mitm: true, ioCapability: IOCapability.DisplayOnly };
 		this.onDisconnected();
 		this.battery = 100;
 	}
