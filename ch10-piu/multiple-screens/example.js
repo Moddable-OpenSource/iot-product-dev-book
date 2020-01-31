@@ -12,35 +12,35 @@
  *
  */
 
-// import SCREENS from "screens";
+ import SCREENS from "screens";
 
-// class MainContainerBehavior extends Behavior {
-// 	onCreate(container, data) {
-// 		this.data = data;
-// 	}
-// 	onDisplaying(container) {
-// 		this.switchScreen(container, "SPLASH");
-// 	}
-// 	switchScreen(container, nextScreenName) {
-// 		container.defer("doSwitchScreen", nextScreenName);
-// 	}
-// 	doSwitchScreen(container, nextScreenName) {
-// 		container.empty();
-// 		application.purge();
-// 		switch (nextScreenName) {
-// 			case "SPLASH":
-// 				container.add(new SCREENS.SplashScreen(this.data));
-// 				break;
-// 			case "HOME":
-// 				container.add(new SCREENS.HomeScreen(this.data));
-// 				break;
-// 		}
-// 	}
-// }
+ class MainContainerBehavior extends Behavior {
+ 	onCreate(container, data) {
+ 		this.data = data;
+ 	}
+ 	onDisplaying(container) {
+ 		this.switchScreen(container, "SPLASH");
+ 	}
+ 	switchScreen(container, nextScreenName) {
+ 		container.defer("doSwitchScreen", nextScreenName);
+ 	}
+ 	doSwitchScreen(container, nextScreenName) {
+ 		container.empty();
+ 		application.purge();
+ 		switch (nextScreenName) {
+ 			case "SPLASH":
+ 				container.add(new SCREENS.SplashScreen(this.data));
+ 				break;
+ 			case "HOME":
+ 				container.add(new SCREENS.HomeScreen(this.data));
+ 				break;
+ 		}
+ 	}
+ }
 
 const MainContainer = Container.template($ => ({
 	top: 0, bottom: 0, left: 0, right: 0,
-	// Behavior: MainContainerBehavior
+	 Behavior: MainContainerBehavior
 }));
 
 application.add(new MainContainer({}));

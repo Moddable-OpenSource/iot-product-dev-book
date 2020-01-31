@@ -6,7 +6,10 @@
 	],
 	"creation": {
 		"static": 35840,
-		"stack":485
+		"stack": 485,
+		"keys": {
+			"available": 96
+		}
 	},
 	"defines": {
 		"XS_MODS": 1
