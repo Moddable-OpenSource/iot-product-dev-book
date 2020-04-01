@@ -17,20 +17,15 @@ import {Server} from "http";
 let server = new Server;
 
 server.callback = function(msg, value) {
-	switch (msg) {
-		case Server.status:
-			trace("\n ** begin upload to ${value} **\n");
-			break;
-
-		case Server.prepareRequest:
-			return true;
-
-		case Server.requestFragment:
-			trace(this.read(String));
-			break;
-
-		case Server.requestComplete:
-			trace("\n ** end of file **\n");
-			break;
-	}
+    if (Server.prepareResponse === msg)
+        return {
+            headers:["Content-Type", "text/plain"],
+            body: true
+        };
+    else if (Server.responseFragment === msg) {
+        let i = Math.round(Math.random() * 100);
+        if (0 === i)
+            return;
+        return i + "\n";
+	} 
 }
