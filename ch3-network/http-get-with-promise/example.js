@@ -15,15 +15,15 @@
 import {Request} from "http";
 
 function fetch(host, path = "/") {
-	return new Promise((resolve, reject) => {
-		let request = new Request({host, path, response: String});
-		request.callback = function(message, value) {
-			if (5 === message)
-				resolve(value);
-			else if (message < 0)
-				reject(-1);
-		}
-	});
+    return new Promise((resolve, reject) => {
+        let request = new Request({host, path, response: String});
+        request.callback = function(msg, value) {
+            if (Request.responseComplete === msg)
+                resolve(value);
+            else if (Request.error === msg)
+                reject(-1);
+        }
+    });
 }
 
 async function httpTrace(host, path) {

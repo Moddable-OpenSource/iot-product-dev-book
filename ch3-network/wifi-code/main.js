@@ -15,22 +15,22 @@
 import WiFi from "wifi";
 
 let wifiMonitor = new WiFi({
-	ssid: "my wi-fi",
-	password: "secret"
-},
-function(msg) {
-	switch (msg) {
-		case WiFi.gotIP:
-	   		trace("network ready\n");
-			break;
+        ssid: "my wi-fi",
+        password: "secret"
+    },
+    function(msg) {
+        switch (msg) {
+            case WiFi.gotIP:
+                trace("network ready\n");
+                break;
 
-		case WiFi.connect:
-	   		trace("connected\n");
-			break;
+            case WiFi.connect:
+                trace("connected\n");
+                break;
 
-		case WiFi.disconnect:
-	   		trace("connection lost\n");
-			break;
+            case WiFi.disconnect:
+                trace("connection lost\n");
+                break;
+		}
 	}
-}
 );
