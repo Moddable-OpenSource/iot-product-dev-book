@@ -24,8 +24,8 @@ let mask = parseBMP(new Resource("wifi-strip-alpha.bmp"));
 
 poco.begin();
 	poco.fillRectangle(white, 0, 0, poco.width, poco.height);
-	poco.drawGray(mask, black, 10, 20, 0, 0, 27, 27); // top left
-	poco.drawGray(mask, black, 37, 20, 0, 27, 27, 27); // bottom left
-	poco.drawGray(mask, black, 10, 47, 112, 0, 27, 27); // top right
+	poco.drawGray(mask, black, 10, 20, 0, 0, 27, 27);    // top left
+	poco.drawGray(mask, black, 37, 20, 0, 27, 27, 27);   // bottom left
+	poco.drawGray(mask, black, 10, 47, 112, 0, 27, 27);  // top right
 	poco.drawGray(mask, black, 37, 47, 112, 27, 27, 27); // bottom right
 poco.end();

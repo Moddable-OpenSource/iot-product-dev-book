@@ -29,6 +29,6 @@ Timer.repeat(function() {
 	let color = poco.makeColor(255 * Math.random(),
 				255 * Math.random(), 255 * Math.random());
 	poco.begin(x, y, width, height);
-	poco.fillRectangle(color, 0, 0, poco.width, poco.height);
+		poco.fillRectangle(color, 0, 0, poco.width, poco.height);
 	poco.end();
 }, 16);

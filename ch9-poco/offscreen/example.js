@@ -47,8 +47,8 @@ Timer.repeat(function() {
 			direction = -1;
 		}
 		else if (step < 1) {
-			 step = 0;
-			 direction = +1;
+			step = 0;
+			direction = +1;
 		 }
 	poco.end();
 }, 33);

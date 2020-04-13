@@ -24,12 +24,12 @@ poco.begin();
 poco.end();
 
 let tile = parseBMP(new Resource("tiles-color.bmp"));
+let size = 30;
+let x = 40, y = 50;
 let phase = 0;
 Timer.repeat(function() {
-	poco.begin(50, 50, 30 * 5, 30 * 5);
-	poco.fillPattern(tile, 50, 50, 30 * 5, 30 * 5,
-		phase * 30, 0, 30, 30);
+	poco.begin(x, y, size * 5, size * 5);
+		poco.fillPattern(tile, x, y, size * 5, size * 5, phase * size, 0, size, size);
 	poco.end();
-
-	phase = (phase + 1) % 11;
+	phase = (phase + 1) % 8;
 }, 66);

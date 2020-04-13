@@ -33,8 +33,8 @@ let step = 2;
 
 Timer.repeat(function() {
 	poco.begin(x, y, mask.width, mask.height);
-	poco.fillRectangle(gray, x, y, mask.width, mask.height);
-	poco.drawMasked(image, x, y, sx, 0, mask.width, mask.height, mask, 0, 0);
+		poco.fillRectangle(gray, x, y, mask.width, mask.height);
+		poco.drawMasked(image, x, y, sx, 0, mask.width, mask.height, mask, 0, 0);
 	poco.end();
 
 	sx -= step;

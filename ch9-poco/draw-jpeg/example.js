@@ -17,11 +17,10 @@ import JPEG from "commodetto/readJPEG";
 import Resource from "Resource";
 
 let poco = new Poco(screen);
-
 let jpeg = new JPEG(new Resource("harvard.jpg"));
 while (jpeg.ready) {
 	let block = jpeg.read();
 	poco.begin(block.x, block.y, block.width, block.height);
-	poco.drawBitmap(block, block.x, block.y);
+		poco.drawBitmap(block, block.x, block.y);
 	poco.end();
 }
