@@ -20,7 +20,11 @@ import {IOCapability} from "sm";
 class HeartRateService extends BLEServer {
 	onReady() {
 		this.deviceName = "Heart Rate Monitor";
-		this.securityParameters = { bonding: true, mitm: true, ioCapability: IOCapability.DisplayOnly };
+		this.securityParameters = { 
+			bonding: true, 
+			mitm: true, 
+			ioCapability: IOCapability.DisplayOnly 
+		};
 		this.onDisconnected();
 		this.battery = 100;
 	}
@@ -40,7 +44,11 @@ class HeartRateService extends BLEServer {
 	onDisconnected() {
 		this.stopMeasurements();
 		this.startAdvertising({
-			advertisingData: {flags: 6, completeName: this.deviceName, completeUUID16List: [uuid`180D`, uuid`180F`]}
+			advertisingData: {
+				flags: 6, 
+				completeName: this.deviceName, 
+				completeUUID16List: [uuid`180D`, uuid`180F`]
+			}
 		});
 	}
 	onCharacteristicNotifyEnabled(characteristic) {
