@@ -16,41 +16,58 @@ const TRANSPARENT = "transparent";
 const BLACK = "black";
 const WHITE = "white";
 
-const backgroundSkin = new Skin({ fill: BLACK });
+const backgroundSkin = new Skin({ 
+	fill: BLACK 
+});
 
-const bigTextStyle = new Style({ font: "24px Open Sans", color: [WHITE, TRANSPARENT] });
-const smallTextStyle = new Style({ font: "semibold 16px Open Sans", color: [WHITE, TRANSPARENT] });
+const bigTextStyle = new Style({ 
+	font: "24px Open Sans", 
+	color: [WHITE, TRANSPARENT] 
+});
+const smallTextStyle = new Style({ 
+	font: "semibold 16px Open Sans", 
+	color: [WHITE, TRANSPARENT] 
+});
 
-const logoTexture1 = new Texture({ path: "logo1.png" });
+const logoTexture1 = new Texture({ 
+	path: "logo1.png" 
+});
 const logoSkin1 = new Skin({
 	texture: logoTexture1,
-	color: ["#9c2448af", TRANSPARENT],
+	color: ["#9c2448af", "#9c244800"],
 	height: 117, width: 146
 });
 
-const logoTexture2 = new Texture({ path: "logo2.png" });
+const logoTexture2 = new Texture({ 
+	path: "logo2.png" 
+});
 const logoSkin2 = new Skin({
 	texture: logoTexture2,
-	color: ["#6F64E8af", TRANSPARENT],
+	color: ["#6F64E8af", "#6F64E800"],
 	height: 117, width: 146
 });
 
-const logoTexture3 = new Texture({ path: "logo3.png" });
+const logoTexture3 = new Texture({ 
+	path: "logo3.png" 
+});
 const logoSkin3 = new Skin({
 	texture: logoTexture3,
-	color: ["#7AFFE7af", TRANSPARENT],
+	color: ["#7AFFE7af", "#7AFFE700"],
 	height: 117, width: 146
 });
 
-const buttonBackgroundTexture = new Texture({ path: "button-bkg.png" });
+const buttonBackgroundTexture = new Texture({ 
+	path: "button-bkg.png" 
+});
 const buttonBackgroundSkin = new Skin({
 	texture: buttonBackgroundTexture,
 	color: "#9c2448af",
 	height: 60, width: 60
 });
 
-
-const restartArrowTexture = new Texture({ path: "restart-arrow.png" });
+const restartArrowTexture = new Texture({ 
+	path: "restart-arrow.png" 
+});
 const restartArrowSkin = new Skin({
 	texture: restartArrowTexture,
 	color: [BLACK, TRANSPARENT],

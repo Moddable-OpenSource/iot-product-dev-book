@@ -15,8 +15,16 @@
 import { HorizontalExpandingKeyboard } from "keyboard";
 import { KeyboardField } from "common/keyboard";
 
-const keyboardStyle = new Style({ font: "semibold 16px Open Sans", color: "black" });
-const fieldStyle = new Style({ font: "24px Open Sans", color: "black", horizontal:"left", vertical:"middle" });
+const keyboardStyle = new Style({ 
+	font: "semibold 16px Open Sans", 
+	color: "black" 
+});
+const fieldStyle = new Style({ 
+	font: "24px Open Sans", 
+	color: "black", 
+	horizontal:"left", 
+	vertical:"middle" 
+});
 
 class KeyboardContainerBehavior extends Behavior {
 	onCreate(column, data){
@@ -43,9 +51,8 @@ class KeyboardContainerBehavior extends Behavior {
 			let keyboard = this.data.KEYBOARD;
 			keyboard.remove(keyboard.first);
 		}
-		else {
+		else
 			this.data.FIELD.visible = true;
-		}
 	}
 }
 

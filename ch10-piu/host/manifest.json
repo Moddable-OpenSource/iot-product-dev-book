@@ -18,13 +18,13 @@
 		"*": [
 			"./main",
 			"../../loadmod/*"
-		],
+		]
 	},
 	"resources": {
 		"*-alpha": [
 			"./OpenSans-Regular-24",
 			"./OpenSans-Semibold-16"
-		],
+		]
 	},
 	"platforms": {
 		"esp": {

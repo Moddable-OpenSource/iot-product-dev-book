@@ -36,7 +36,8 @@ class TimelineBehavior extends Behavior {
 	}
 	onTimeChanged(container) {
 		let time = container.time;
-		if (this.reverse) time = container.duration - time;
+		if (this.reverse) 
+			time = container.duration - time;
 		this.timeline.seekTo(time);
 	}
 	onFinished(container) {
@@ -48,13 +49,17 @@ class TimelineBehavior extends Behavior {
 }
 
 const animatedContainer = new Container(null, {
-	top: 0, bottom: 0, left: 0, right: 0, skin: whiteSkin,
+	top: 0, bottom: 0, left: 0, right: 0, 
+	skin: whiteSkin,
 	contents: [
 		new Label(null, { 
-			style: textStyle, top: 80, left: 0, right: 0, string: "Hello, World" 
+			style: textStyle, 
+			top: 80, left: 0, right: 0, 
+			string: "Hello, World" 
 		}),
 		new Content(null, {
-			top: 115, height: 3, left: 0, width: 320, skin: colorfulSkin
+			top: 115, height: 3, left: 0, width: 320, 
+			skin: colorfulSkin
 		})
 	],
 	Behavior: TimelineBehavior

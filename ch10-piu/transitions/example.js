@@ -69,7 +69,7 @@ const parameters = [
 	{ transition:WipeTransition, first:"center", last:"top" },
 	{ transition:WipeTransition, first:"right", last:"middle" },
 	{ transition:WipeTransition, first:"center", last:"bottom" },
-	{ transition:WipeTransition, first:"left", last:"middle" },
+	{ transition:WipeTransition, first:"left", last:"middle" }
 ];
 
 class MainContainerBehavior extends Behavior {

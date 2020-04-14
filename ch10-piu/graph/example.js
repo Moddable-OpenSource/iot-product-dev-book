@@ -16,7 +16,9 @@ const WHITE = "white";
 const GRAY = "#e6e6e6";
 const BLUE = "#1932ab";
 
-const textStyle = new Style({ font: "semibold 16px Open Sans" });
+const textStyle = new Style({ 
+	font: "semibold 16px Open Sans" 
+});
 
 class GraphBehavior extends Behavior {
 	onDisplaying(port) {
@@ -33,10 +35,8 @@ class GraphBehavior extends Behavior {
 	onDraw(port, x, y, width, height) {
 		port.fillColor(WHITE, x, y, width, height);
 
-		for (let i = 100, yOffset = 0; yOffset < height;
-				yOffset += height / 5, i -= 20) {
-			port.drawString(i, textStyle, "black",
-				30 - textStyle.measure(i).width, yOffset);
+		for (let i = 100, yOffset = 0; yOffset < height; yOffset += height / 5, i -= 20) {
+			port.drawString(i, textStyle, "black", 30 - textStyle.measure(i).width, yOffset);
 			port.fillColor(GRAY, 35, yOffset + 10, width, 1);
 		}
 
@@ -45,8 +45,7 @@ class GraphBehavior extends Behavior {
 		for (let i = 0; i < values.length; i++) {
 			let value = values[i];
 			let barHeight = (value / 100) * (height - 10);
-			port.fillColor(BLUE, xOffset, height - barHeight,
-				12, barHeight);
+			port.fillColor(BLUE, xOffset, height - barHeight, 12, barHeight);
 			xOffset += 14;
 		}
 	}

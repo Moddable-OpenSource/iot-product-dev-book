@@ -53,12 +53,30 @@ class SplashScreenBehavior extends Behavior {
 }
 
 const SplashScreen = Container.template($ => ({
-	top: 0, bottom: 0, left: 0, right: 0, skin: ASSETS.backgroundSkin,
+	top: 0, bottom: 0, left: 0, right: 0, 
+	skin: ASSETS.backgroundSkin,
 	contents: [
-		Content($, { anchor: "LOGO1", top: 30, skin: ASSETS.logoSkin1 }),
-		Content($, { anchor: "LOGO2", top: 30, skin: ASSETS.logoSkin2 }),
-		Content($, { anchor: "LOGO3", top: 30, skin: ASSETS.logoSkin3 }),
-		Label($, { anchor: "TITLE", top: 155, style: ASSETS.bigTextStyle, string: "lorem ipsum" })
+		Content($, { 
+			anchor: "LOGO1", 
+			top: 30, 
+			skin: ASSETS.logoSkin1 
+		}),
+		Content($, { 
+			anchor: "LOGO2", 
+			top: 30, 
+			skin: ASSETS.logoSkin2 
+		}),
+		Content($, { 
+			anchor: "LOGO3", 
+			top: 30, 
+			skin: ASSETS.logoSkin3 
+		}),
+		Label($, { 
+			anchor: "TITLE", 
+			top: 155, 
+			style: ASSETS.bigTextStyle, 
+			string: "lorem ipsum" 
+		})
 	],
 	Behavior: SplashScreenBehavior
 }));
@@ -105,27 +123,39 @@ class HomeScreenBehavior extends Behavior {
 			delete data["TEXT"];
 			// Transition to next screen
 			container.bubble("switchScreen", "SPLASH");
-		} else {
+		} 
+		else
 			delete this.timeline;
-		}
 	}
 }
 
 const HomeScreen = Row.template($ => ({
-	top: 0, bottom: 0, left: 0, right: 0, skin: ASSETS.backgroundSkin,
+	top: 0, bottom: 0, left: 0, right: 0, 
+	skin: ASSETS.backgroundSkin,
 	contents: [
-		Content($, { left: 0, right: 0 }),
+		Content($, { 
+			left: 0, right: 0 
+		}),
 		Container($, {
-			anchor: "ICON", skin: ASSETS.buttonBackgroundSkin,
+			anchor: "ICON", 
+			skin: ASSETS.buttonBackgroundSkin,
 			contents: [
-				Content($, { skin: ASSETS.restartArrowSkin })
+				Content($, { 
+					skin: ASSETS.restartArrowSkin 
+				})
 			],
-			active: true, Behavior: RestartButtonBehavior
+			active: true, 
+			Behavior: RestartButtonBehavior
 		}),
 		Label($, {
-			anchor: "TEXT", left: 10, style: ASSETS.bigTextStyle, string: "Restart"
+			anchor: "TEXT", 
+			left: 10, 
+			style: ASSETS.bigTextStyle, 
+			string: "Restart"
 		}),
-		Content($, { left: 0, right: 0 })
+		Content($, { 
+			left: 0, right: 0 
+		})
 	],
 	Behavior: HomeScreenBehavior
 }));
