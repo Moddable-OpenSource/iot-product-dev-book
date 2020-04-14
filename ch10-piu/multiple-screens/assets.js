@@ -34,7 +34,7 @@ const logoTexture1 = new Texture({
 });
 const logoSkin1 = new Skin({
 	texture: logoTexture1,
-	color: ["#9c2448af", "#9c244800"],
+	color: ["#9c2448af", TRANSPARENT],
 	height: 117, width: 146
 });
 
@@ -43,7 +43,7 @@ const logoTexture2 = new Texture({
 });
 const logoSkin2 = new Skin({
 	texture: logoTexture2,
-	color: ["#6F64E8af", "#6F64E800"],
+	color: ["#6F64E8af", TRANSPARENT],
 	height: 117, width: 146
 });
 
@@ -52,7 +52,7 @@ const logoTexture3 = new Texture({
 });
 const logoSkin3 = new Skin({
 	texture: logoTexture3,
-	color: ["#7AFFE7af", "#7AFFE700"],
+	color: ["#7AFFE7af", TRANSPARENT],
 	height: 117, width: 146
 });
 
