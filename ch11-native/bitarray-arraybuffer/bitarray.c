@@ -18,17 +18,16 @@
 
 void xs_bitarray_set(xsMachine *the)
 {
-	uint8_t *buffer;
 	int index = xsmcToInteger(xsArg(0));
 	int byteIndex = index >> 3;
 	int bitIndex = index & 0x07;
-	int value = xsmcToInteger(xsArg(1));
 
 	xsmcVars(1);
 
 	xsmcGet(xsVar(0), xsThis, xsID_buffer);
-	buffer = xsmcToArrayBuffer(xsVar(0));
+	uint8_t *buffer = xsmcToArrayBuffer(xsVar(0));
 
+	int value = xsmcToInteger(xsArg(1));
 	if (value)
 		buffer[byteIndex] |= 1 << bitIndex;
 	else
@@ -37,7 +36,6 @@ void xs_bitarray_set(xsMachine *the)
 
 void xs_bitarray_get(xsMachine *the)
 {
-	uint8_t *buffer;
 	int index = xsmcToInteger(xsArg(0));
 	int byteIndex = index >> 3;
 	int bitIndex = index & 0x07;
@@ -45,7 +43,7 @@ void xs_bitarray_get(xsMachine *the)
 	xsmcVars(1);
 
 	xsmcGet(xsVar(0), xsThis, xsID_buffer);
-	buffer = xsmcToArrayBuffer(xsVar(0));
+	uint8_t *buffer = xsmcToArrayBuffer(xsVar(0));
 
 	if (buffer[byteIndex] & (1 << bitIndex))
 		xsmcSetInteger(xsResult, 1);

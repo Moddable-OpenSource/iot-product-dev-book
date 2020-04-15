@@ -24,6 +24,7 @@ void xs_bitarray_constructor(xsMachine *the)
 	uint8_t *bytes = calloc(byteCount + sizeof(int), 1);
 	if (!bytes)
 		xsUnknownError("no memory");
+	
 	*(int *)bytes = bitCount;
 	xsmcSetHostData(xsThis, bytes);
 }
@@ -43,21 +44,20 @@ void xs_bitarray_close(xsMachine *the)
 
 void xs_bitarray_set(xsMachine *the)
 {
-	uint8_t *buffer = xsmcGetHostData(xsThis);
-	int bitCount;
 	int index = xsmcToInteger(xsArg(0));
 	int byteIndex = index >> 3;
 	int bitIndex = index & 0x07;
-	int value = xsmcToInteger(xsArg(1));
 
+	uint8_t *buffer = xsmcGetHostData(xsThis);
 	if (NULL == buffer)
 		xsUnknownError("closed");
 
-	bitCount = *(int *)buffer;
+	int bitCount = *(int *)buffer;
 	buffer += sizeof(int);
 	if ((index >= bitCount) || (index < 0))
 		xsRangeError("invalid bit index");
 
+	int value = xsmcToInteger(xsArg(1));
 	if (value)
 		buffer[byteIndex] |= 1 << bitIndex;
 	else
@@ -66,16 +66,15 @@ void xs_bitarray_set(xsMachine *the)
 
 void xs_bitarray_get(xsMachine *the)
 {
-	uint8_t *buffer = xsmcGetHostData(xsThis);
-	int bitCount;
 	int index = xsmcToInteger(xsArg(0));
 	int byteIndex = index >> 3;
 	int bitIndex = index & 0x07;
 
+	uint8_t *buffer = xsmcGetHostData(xsThis);
 	if (NULL == buffer)
 		xsUnknownError("closed");
 
-	bitCount = *(int *)buffer;
+	int bitCount = *(int *)buffer;
 	buffer += sizeof(int);
 	if ((index >= bitCount) || (index < 0))
 		xsRangeError("invalid bit index");
