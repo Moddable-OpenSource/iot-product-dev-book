@@ -115,9 +115,9 @@ void checkRSSI(modTimer timer, void *refcon, int refconSize)
 #else
 	#error Unsupported target
 #endif
-xsBeginHost(rn->the);
-	xsLog("rssi %d\n", rssi);
-xsEndHost(rn->the);
+	xsBeginHost(rn->the);
+		xsLog("rssi %d\n", rssi);
+	xsEndHost(rn->the);
 
 	if (rssi > rn->threshold) {
 		if (kRSSIStrong == rn->state)
