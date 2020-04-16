@@ -24,11 +24,11 @@ let wifiMonitor = new WiFi({
                 trace("network ready\n");
                 break;
 
-            case WiFi.connect:
+            case WiFi.connected:
                 trace("connected\n");
                 break;
 
-            case WiFi.disconnect:
+            case WiFi.disconnected:
                 trace("connection lost\n");
                 break;
 		}

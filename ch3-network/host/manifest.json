@@ -36,11 +36,6 @@
 		"logical",
 		"mqtt"
 	],
-	"resources": {
-		"*": [
-			"$(MODULES)/crypt/data/ca107"
-		]
-	},
 	"strip": [
 		"Atomics",
 		"BigInt",

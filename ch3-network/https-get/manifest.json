@@ -1,5 +1,10 @@
 {
 	"modules": {
 		"*": "./example"
+	},
+	"resources": {
+		"*": [
+			"$(MODDABLE)/modules/crypt/data/ca107"
+		]
 	}
 }
