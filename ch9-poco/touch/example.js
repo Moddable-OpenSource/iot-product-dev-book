@@ -13,9 +13,9 @@
  */
 
 import Timer from "timer";
-import FT6202 from "ft6202";
+import FT6206 from "ft6206";
 
-let touch = new FT6202;
+let touch = new FT6206;
 touch.points = [{}];
 
 Timer.repeat(function() {
