@@ -1,0 +1,14 @@
+{
+	"service": {
+		"uuid": "6E400001-B5A3-F393-E0A9-E50E24DCCA9E",
+		"characteristics": {
+			"text": {
+				"uuid": "6E400003-B5A3-F393-E0A9-E50E24DCCA9E",
+				"type": "String",
+				"maxBytes": 20,
+				"permissions": "read",
+				"properties": "notify",
+			}
+		}
+	}
+}
