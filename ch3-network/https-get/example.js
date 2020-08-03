@@ -19,7 +19,8 @@ let request = new Request({
 	host: "www.example.com",
 	path: "/",
 	response: String,
-	Socket: SecureSocket
+	Socket: SecureSocket,
+	port: 443
 });
 
 request.callback = function(msg, value) {
