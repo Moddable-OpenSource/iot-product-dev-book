@@ -4,6 +4,22 @@ This document lists errors discovered after the publication of the book. If you 
 
 ***
 
+### Page 152
+
+Listing 3-15 does not match the [`https-get` example](./ch3-network/https-get). The listing leaves out the `port` property in the dictionary passed to the `Request` constructor; it should be as follows:
+
+```js
+let request = new Request({
+	host: "www.example.com",
+	path: "/",
+	response: String,
+	Socket: SecureSocket,
+	port: 443
+});
+```
+
+***
+
 ### Page 193-200
 
 The **Creating Two-Way Communication** section explains how to use the Bluefruit mobile app to create a peripheral. However, the Bluefruit mobile app no longer has the **Peripheral Mode** feature described in the text, so the instructions in this section are no longer valid.
