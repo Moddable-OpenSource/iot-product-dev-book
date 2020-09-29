@@ -5,23 +5,23 @@
 		"$(MODULES)/pins/digital/monitor/manifest.json",
 		"$(MODULES)/pins/analog/manifest.json",
 		"$(MODULES)/pins/servo/manifest.json",
-		"$(MODULES)/pins/i2c/manifest.json",
+		"$(MODULES)/pins/i2c/manifest.json"
 	],
 	"defines": {
-		"XS_MODS": 1,
+		"XS_MODS": 1
 	},
 	"modules": {
 		"*": [
 			"./main",
-			"../../loadmod/*",
+			"../../loadmod/*"
 		],
 		"pins/pwm": "$(MODULES)/pins/pwm/pwm",
-		"pins/smbus": "$(MODULES)/pins/smbus/smbus",
+		"pins/smbus": "$(MODULES)/pins/smbus/smbus"
 	},
 	"platforms": {
 		"esp": {
 			"modules": {
-				"*": "$(MODULES)/pins/pwm/esp/*",
+				"*": "$(MODULES)/pins/pwm/esp/*"
 			},
 			"defines": {
 				"i2c": {
@@ -32,7 +32,7 @@
 		},
 		"esp32": {
 			"modules": {
-				"*": "$(MODULES)/pins/pwm/esp32/*",
+				"*": "$(MODULES)/pins/pwm/esp32/*"
 			},
 			"defines": {
 				"i2c": {
@@ -43,7 +43,10 @@
 		},
 		"...": {
 			"error": "Platform not supported"
-		},
+		}
 	},
-	"strip": []
+	"strip": [],
+	"build": {
+		"NAME": "ch6host",
+	}
 }

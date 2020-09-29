@@ -1,6 +1,9 @@
 {
 	"modules": {
 		"*": "./example"
+	},
+	"build": {
+		"NAME": "ch10helloworld",
 	}
 }
 

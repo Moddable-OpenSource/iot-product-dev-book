@@ -31,7 +31,7 @@
 					"volume_divider": 1,
 					"i2s": {
 						"pdm": 32,
-						"bitsPerSample": 16,
+						"bitsPerSample": 16
 					}
 				}
 			}
@@ -44,7 +44,7 @@
 					"sampleRate": 11025,
 					"volume_divider": 1,
 					"i2s": {
-						"DAC": 1,
+						"DAC": 1
 					}
 				}
 			}
@@ -65,5 +65,8 @@
 		"SharedArrayBuffer",
 		"WeakMap",
 		"WeakSet"
-	]
+	],
+	"build": {
+		"NAME": "ch7hostpdm",
+	}
 }

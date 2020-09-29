@@ -50,5 +50,8 @@
 		"SharedArrayBuffer",
 		"WeakMap",
 		"WeakSet"
-	]
+	],
+	"build": {
+		"NAME": "ch3host",
+	}
 }

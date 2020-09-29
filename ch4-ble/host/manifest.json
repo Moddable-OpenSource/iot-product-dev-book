@@ -2,7 +2,7 @@
 	"include": [
 		"$(MODDABLE)/examples/manifest_base.json",
 		"$(MODDABLE)/modules/network/ble/manifest_server.json",
-		"$(MODDABLE)/modules/network/ble/manifest_client.json",
+		"$(MODDABLE)/modules/network/ble/manifest_client.json"
 	],
 	"defines": {
 		"XS_MODS": 1
@@ -10,13 +10,16 @@
 	"modules": {
 		"*": [
 			"./main",
-			"../../loadmod/*",
+			"../../loadmod/*"
 		]
 	},
 	"ble":{
 		"*": [
-			"./bleservices/*",
-		],
+			"./bleservices/*"
+		]
 	},
 	"strip": [],
+	"build": {
+		"NAME": "ch4host",
+	}
 }

@@ -25,5 +25,8 @@
 		"RegExp",
 		"Proxy",
 		"eval"
-	]
+	],
+	"build": {
+		"NAME": "ch9host"
+	}
 }

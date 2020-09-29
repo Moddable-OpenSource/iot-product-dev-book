@@ -11,5 +11,8 @@
 			"../../loadmod/*"
 		]
 	},
-	"strip": []
+	"strip": [],
+	"build": {
+		"NAME": "ch1host",
+	}
 }

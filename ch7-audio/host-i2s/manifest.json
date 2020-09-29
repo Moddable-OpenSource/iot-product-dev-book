@@ -67,5 +67,8 @@
 		"SharedArrayBuffer",
 		"WeakMap",
 		"WeakSet"
-	]
+	],
+	"build": {
+		"NAME": "ch7hosti2s",
+	}
 }
