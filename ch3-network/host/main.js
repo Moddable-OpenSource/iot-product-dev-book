@@ -29,18 +29,18 @@ export default function () {
 
 			let monitor = new WiFi({ssid: config.ssid, password: config.password}, function(msg, code) {
 			   switch (msg) {
-				   case "gotIP":
+				   case WiFi.gotIP:
 						trace(`IP address ${Net.get("IP")}\n`);
 						monitor.close();
 
 						LoadMod.load("example");
 						break;
 
-					case "connect":
+					case WiFi.connected:
 						trace(`Wi-Fi connected to "${Net.get("SSID")}"\n`);
 						break;
 
-					case "disconnect":
+					case WiFi.disconnected:
 						trace((-1 === code) ? "Wi-Fi password rejected\n" : "Wi-Fi disconnected\n");
 						break;
 				}
