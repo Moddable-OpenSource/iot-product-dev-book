@@ -14,6 +14,9 @@
 		"XS_MODS": 1
 	},
 	"modules": {
+		"~": [
+			"$(BUILD)/devices/esp/setup/network",
+		],
 		"*": [
 			"./main",
 			"../../loadmod/*",

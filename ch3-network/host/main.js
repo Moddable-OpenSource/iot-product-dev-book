@@ -25,6 +25,8 @@ export default function () {
 	if (LoadMod.has("mod/config")) {
 		const config = LoadMod.load("mod/config");
 		if (config.ssid) {
+			trace(`Wi-Fi trying to connect to "${config.ssid}"\n`);
+
 			WiFi.mode = 1;
 
 			let monitor = new WiFi({ssid: config.ssid, password: config.password}, function(msg, code) {
