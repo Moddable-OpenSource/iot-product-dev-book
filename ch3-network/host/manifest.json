@@ -14,9 +14,6 @@
 		"XS_MODS": 1
 	},
 	"modules": {
-		"~": [
-			"$(BUILD)/devices/esp/setup/network",
-		],
 		"*": [
 			"./main",
 			"../../loadmod/*",
@@ -56,5 +53,21 @@
 	],
 	"build": {
 		"NAME": "ch3host",
+	},
+	"platforms": {
+		"esp": {
+			"modules": {
+				"~": [
+					"$(BUILD)/devices/esp/setup/network",
+				],
+			}
+		},
+		"esp32": {
+			"modules": {
+				"~": [
+					"$(BUILD)/devices/esp32/setup/network",
+				],
+			}
+		},
 	}
 }
