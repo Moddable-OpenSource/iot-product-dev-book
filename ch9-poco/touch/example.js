@@ -27,13 +27,13 @@ Timer.repeat(function() {
 			trace("no touch\n");
 			break;
 		case 1:
-			trace("touch begin @ ${point.x}, ${point.y}\n");
+			trace(`touch begin @ ${point.x}, ${point.y}\n`);
 			break;
 		case 2:
-			trace("touch continue @ ${point.x}, ${point.y}\n");
+			trace(`touch continue @ ${point.x}, ${point.y}\n`);
 			break;
 		case 3:
-			trace("touch end @ ${point.x}, ${point.y}\n");
+			trace(`touch end @ ${point.x}, ${point.y}\n`);
 			break;
 	}
 }, 33);
