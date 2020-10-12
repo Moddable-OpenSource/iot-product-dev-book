@@ -13,14 +13,45 @@
  */
 
 import LoadMod from "loadmod";
+import WiFi from "wifi";
+import Net from "net";
 
 export default function () {
-	if (LoadMod.has("check")) {
-		let check = LoadMod.load("check");
-		check();
-		if (LoadMod.has("example"))
-			LoadMod.load("example");
-	} else {
-		trace("Device flashed. Ready to install apps.\n");
+	if (!LoadMod.has("check") || !LoadMod.has("example"))
+		return trace("Host installed. Ready for mods.\n");
+
+	(LoadMod.load("check"))();
+
+	if (LoadMod.has("mod/config")) {
+		const config = LoadMod.load("mod/config");
+		if (config.ssid) {
+			trace(`Wi-Fi trying to connect to "${config.ssid}"\n`);
+
+			WiFi.mode = 1;
+
+			let monitor = new WiFi({ssid: config.ssid, password: config.password}, function(msg, code) {
+			   switch (msg) {
+				   case WiFi.gotIP:
+						trace(`IP address ${Net.get("IP")}\n`);
+						monitor.close();
+
+						LoadMod.load("example");
+						break;
+
+					case WiFi.connected:
+						trace(`Wi-Fi connected to "${Net.get("SSID")}"\n`);
+						break;
+
+					case WiFi.disconnected:
+						trace((-1 === code) ? "Wi-Fi password rejected\n" : "Wi-Fi disconnected\n");
+						break;
+				}
+			});
+			return;
+		}
+		if (config.wifi && !Net.get("SSID"))
+			throw new Error(`This example requires Wi-Fi. When executing mcrun specify ssid and password.\n`);
 	}
+
+	LoadMod.load("example");
 }

@@ -28,6 +28,9 @@
 					"$(MODULES)/files/preference/esp/*",
 					"$(MODULES)/files/flash/*",
 					"$(MODULES)/files/flash/esp/*"
+				],
+				"~": [
+					"$(BUILD)/devices/esp/setup/network"
 				]
 			}
 		},
@@ -37,6 +40,9 @@
 					"$(MODULES)/files/preference/esp32/*",
 					"$(MODULES)/files/flash/*",
 					"$(MODULES)/files/flash/esp32/*"
+				],
+				"~": [
+					"$(BUILD)/devices/esp32/setup/network"
 				]
 			}
 		},
