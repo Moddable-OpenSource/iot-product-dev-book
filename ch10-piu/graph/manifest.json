@@ -1,6 +1,9 @@
 {
 	"modules": {
 		"*": "./example"
+	},
+	"config": {
+		"rotation": 90
 	}
 }
 

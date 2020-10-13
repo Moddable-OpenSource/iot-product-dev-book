@@ -14,6 +14,18 @@
 			"./button-bkg",
 			"./restart-arrow"
 		]
+	},
+	"platforms": {
+		"esp": {
+			"config": {
+				"rotation": 90
+			}
+		},
+		"esp32": {
+			"config": {
+				"rotation": 90
+			}
+		}
 	}
 }
 
