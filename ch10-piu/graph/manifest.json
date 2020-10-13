@@ -2,8 +2,17 @@
 	"modules": {
 		"*": "./example"
 	},
-	"config": {
-		"rotation": 90
+	"platforms": {
+		"esp": {
+			"config": {
+				"rotation": 90
+			}
+		},
+		"esp32": {
+			"config": {
+				"rotation": 90
+			}
+		}
 	}
 }
 
