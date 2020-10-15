@@ -14,6 +14,7 @@
  
 import {} from "piu/MC"
 import LoadMod from "loadmod";
+import Timer from "timer";
 
 const textStyle = new Style({
     font: "24px Open Sans",
@@ -30,7 +31,7 @@ class AppBehavior extends Behavior {
 			let check = LoadMod.load("check");
 			check();
 			if (LoadMod.has("example"))
-				LoadMod.load("example");
+				Timer.set(() => LoadMod.load("example"));
 		} else {
 			app.add(readyText);
 		}
