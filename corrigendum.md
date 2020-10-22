@@ -45,6 +45,16 @@ The devices will automatically pair, and the `text-client` will subscribe to not
 
 ***
 
+### Page 266
+
+The **Monitoring for Changes** section does not provide the import statement for the `Monitor` class used in Listing 6-5.
+
+```js
+import Monitor from "pins/digital/monitor";
+```
+
+***
+
 ### Page 338
 
 > Figure 8-8 shows the same circle mask drawn in blue (which appears gray in printed versions of this book).
