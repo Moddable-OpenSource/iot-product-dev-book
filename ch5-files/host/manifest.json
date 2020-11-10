@@ -14,7 +14,7 @@
 			"$(MODULES)/files/preference/*",
 			"$(MODULES)/files/zip/*",
 			"$(MODULES)/network/http/*"
-		],
+		]
 	},
 	"preload": [
 		"preference",
@@ -63,6 +63,6 @@
 	},
 	"strip": [],
 	"build": {
-		"NAME": "ch5host",
+		"NAME": "ch5host"
 	}
 }

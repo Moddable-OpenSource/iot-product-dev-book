@@ -13,6 +13,6 @@
 	},
 	"strip": [],
 	"build": {
-		"NAME": "ch1host",
+		"NAME": "ch1host"
 	}
 }

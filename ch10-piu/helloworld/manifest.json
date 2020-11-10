@@ -3,7 +3,7 @@
 		"*": "./example"
 	},
 	"build": {
-		"NAME": "ch10helloworld",
+		"NAME": "ch10helloworld"
 	},
 	"platforms": {
 		"esp": {

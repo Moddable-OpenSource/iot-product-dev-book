@@ -52,7 +52,7 @@
 		"WeakSet"
 	],
 	"build": {
-		"NAME": "ch3host",
+		"NAME": "ch3host"
 	},
 	"platforms": {
 		"esp": {

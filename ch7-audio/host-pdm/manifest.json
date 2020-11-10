@@ -67,6 +67,6 @@
 		"WeakSet"
 	],
 	"build": {
-		"NAME": "ch7hostpdm",
+		"NAME": "ch7hostpdm"
 	}
 }

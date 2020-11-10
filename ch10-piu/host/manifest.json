@@ -43,6 +43,6 @@
 		"eval"	
 	],
 	"build": {
-		"NAME": "ch10host",
+		"NAME": "ch10host"
 	}
 }
