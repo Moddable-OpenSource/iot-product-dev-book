@@ -48,6 +48,9 @@ export default function () {
 				}
 			});
 			return;
+		} else {
+			throw new Error(`This example requires Wi-Fi. When executing mcrun specify ssid and password.\n`);
+			return;
 		}
 	}
 
