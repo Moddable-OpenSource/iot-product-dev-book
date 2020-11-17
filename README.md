@@ -43,6 +43,6 @@ You can purchase the book [here](https://www.keplers.com/book/9781484250693).
 
 ## Questions? We're here to help
 
-If you have a question or comment about the examples or content in this book, we recommend you [open an issue](https://github.com/Moddable-OpenSource/iot-product-dev-book/issues) in this repository. Also see the [corrigendum](./corrigendum.md) for corrections to the text.
+If you have a question or comment about the examples or content in this book, we recommend you send us a message in [our Gitter chatroom](https://gitter.im/embedded-javascript/moddable) or [open an issue](https://github.com/Moddable-OpenSource/iot-product-dev-book/issues) in this repository. Also see the [corrigendum](./corrigendum.md) for corrections to the text.
 
 If you're having technical issues with the Moddable SDK—for example installing the SDK, building and flashing examples, or using the debugger—please open an issue in the [Moddable SDK repository](https://github.com/Moddable-OpenSource/moddable/).
