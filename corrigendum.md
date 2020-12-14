@@ -20,6 +20,39 @@ let request = new Request({
 
 ***
 
+### Page 160-161
+
+> To ask the HTTP `Server` class to deliver the request body in fragments, the callback returns `true` to the `prepareRequest` message. 
+ 
+This sentence is incorrect. The callback returns true to the `headersComplete` message, not the `prepareRequest` message.
+
+In addition, Listing 3-22 does not match the [`https-server-streaming-put` example](./ch3-network/http-server-streaming-put). The listing uses quotation marks instead of backticks in the first trace statement and the `prepareRequest` message instead of the `headersComplete` message; it shuld be as follows:
+
+```js
+let server = new Server;
+
+server.callback = function(msg, value) {
+	switch (msg) {
+		case Server.status:
+			trace(`\n ** begin upload to ${value} **\n`);
+			break;
+
+		case Server.headersComplete:		// prepare for request body
+			return true;					// provide request body in fragments
+
+		case Server.requestFragment:
+			trace(this.read(String));
+			break;
+
+		case Server.requestComplete:
+			trace("\n ** end of file **\n");
+			break;
+	}
+}
+```
+
+***
+
 ### Page 193-200
 
 The **Creating Two-Way Communication** section explains how to use the Bluefruit mobile app to create a peripheral. However, the Bluefruit mobile app no longer has the **Peripheral Mode** feature described in the text, so the instructions in this section are no longer valid.
