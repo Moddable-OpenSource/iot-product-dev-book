@@ -19,11 +19,11 @@ let server = new Server;
 server.callback = function(msg, value) {
 	switch (msg) {
 		case Server.status:
-			trace("\n ** begin upload to ${value} **\n");
+			trace(`\n ** begin upload to ${value} **\n`);
 			break;
 
-		case Server.prepareRequest:
-			return true;
+		case Server.headersComplete:		// prepare for request body
+			return true;					// provide request body in fragments
 
 		case Server.requestFragment:
 			trace(this.read(String));
