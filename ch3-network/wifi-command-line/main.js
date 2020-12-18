@@ -14,8 +14,4 @@
 
 import Net from "net";
 
-function convert(str) {
-	return str ? str : "";
-}
-
-trace(`Connected to Wi-Fi. IP Address is: ${convert(Net.get("IP"))}`);
+trace(`Connected to Wi-Fi. IP Address is: ${Net.get("IP")}\n`);
