@@ -23,7 +23,7 @@ let request = new Request({
 });
 
 request.callback = function(msg, value) {
-	if (Request.responseComplete == msg) {
+	if (Request.responseComplete === msg) {
 		value = JSON.parse(value);
 		trace(`name: ${value.json.string}\n`);
 		trace(`value: ${value.json.number}\n`);
