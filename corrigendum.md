@@ -20,13 +20,50 @@ let request = new Request({
 
 ***
 
+### Page 159
+
+Listing 3-21 returns `String` for the `Server.status` message instead of the `Server.headersComplete` message. The full corrected listing is as follows:
+
+```
+let server = new Server;
+
+server.callback = function(msg, value, etc) {
+	switch (msg) {
+		case Server.status:
+			if ("PUT" !== etc)
+				this.close();
+			return;
+
+		case Server.headersComplete:
+			return String;
+
+		case Server.requestComplete:
+			this.json = {
+				error: "none",
+				when: (new Date).toString(),
+				request: JSON.parse(value)
+			};
+			break;
+
+		case Server.prepareResponse:
+			return {
+				headers: ["Content-Type", "application/json"],
+				body: JSON.stringify(this.json)
+			};
+	}
+}
+```
+
+
+***
+
 ### Page 160-161
 
 > To ask the HTTP `Server` class to deliver the request body in fragments, the callback returns `true` to the `prepareRequest` message. 
  
 This sentence is incorrect. The callback returns true to the `headersComplete` message, not the `prepareRequest` message.
 
-In addition, Listing 3-22 does not match the [`https-server-streaming-put` example](./ch3-network/http-server-streaming-put). The listing uses quotation marks instead of backticks in the first trace statement and the `prepareRequest` message instead of the `headersComplete` message; it shuld be as follows:
+In addition, Listing 3-22 does not match the [`https-server-streaming-put` example](./ch3-network/http-server-streaming-put). The listing uses quotation marks instead of backticks in the first trace statement and the `prepareRequest` message instead of the `headersComplete` message; it should be as follows:
 
 ```js
 let server = new Server;
