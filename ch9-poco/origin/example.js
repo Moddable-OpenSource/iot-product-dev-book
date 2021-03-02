@@ -14,8 +14,9 @@
 
 import Poco from "commodetto/Poco";
 import Timer from "timer";
+import config from "mc/config";
 
-let poco = new Poco(screen);
+let poco = new Poco(screen, {rotation: config.rotation});
 let black = poco.makeColor(0, 0, 0);
 let white = poco.makeColor(255, 255, 255);
 let yellow = poco.makeColor(255, 255, 0);

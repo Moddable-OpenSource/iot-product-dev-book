@@ -15,8 +15,9 @@
 import parseBMF from "commodetto/parseBMF";
 import Poco from "commodetto/Poco";
 import Resource from "Resource";
+import config from "mc/config";
 
-let render = new Poco(screen, { displayListLength: 2048 });
+let render = new Poco(screen, { displayListLength: 2048, rotation: config.rotation });
 
 let black = render.makeColor(0, 0, 0);
 let white = render.makeColor(255, 255, 255);

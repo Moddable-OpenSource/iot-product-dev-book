@@ -16,8 +16,9 @@ import Poco from "commodetto/Poco";
 import Resource from "Resource";
 import parseBMF from "commodetto/parseBMF";
 import Timer from "timer";
+import config from "mc/config";
 
-let poco = new Poco(screen, {displayListLength: 4000});
+let poco = new Poco(screen, {displayListLength: 4000, rotation: config.rotation});
 
 let white = poco.makeColor(255, 255, 255);
 let black = poco.makeColor(0, 0, 0);

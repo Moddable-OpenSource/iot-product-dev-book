@@ -15,6 +15,9 @@
 import Poco from "commodetto/Poco";
 import JPEG from "commodetto/readJPEG";
 import Resource from "Resource";
+import config from "mc/config";
+if (config.rotation !== 0)
+	throw new Error("Rotation must be 0 for this example");
 
 let poco = new Poco(screen);
 let jpeg = new JPEG(new Resource("harvard.jpg"));

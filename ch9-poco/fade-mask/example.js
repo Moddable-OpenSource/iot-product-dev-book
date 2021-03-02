@@ -16,8 +16,9 @@ import Poco from "commodetto/Poco";
 import Resource from "Resource";
 import Timer from "timer";
 import parseRLE from "commodetto/parseRLE";
+import config from "mc/config";
 
-let poco = new Poco(screen);
+let poco = new Poco(screen, {rotation: config.rotation});
 poco.begin();
 	drawBars(poco);
 poco.end();

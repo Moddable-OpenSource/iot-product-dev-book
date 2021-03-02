@@ -16,8 +16,9 @@ import Poco from "commodetto/Poco";
 import Resource from "Resource";
 import parseBMP from "commodetto/parseBMP";
 import Timer from "timer";
+import config from "mc/config";
 
-let poco = new Poco(screen);
+let poco = new Poco(screen, {rotation: config.rotation});
 
 let image = parseBMP(new Resource("train-color.bmp"));
 let mask = parseBMP(new Resource("mask_circle.bmp"));

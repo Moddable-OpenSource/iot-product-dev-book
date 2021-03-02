@@ -15,8 +15,9 @@
 import Poco from "commodetto/Poco";
 import Resource from "Resource";
 import parseBMF from "commodetto/parseBMF";
+import config from "mc/config";
 
-let poco = new Poco(screen, {displayListLength: 4000});
+let poco = new Poco(screen, {displayListLength: 4000, rotation: config.rotation});
 
 let regular16 = parseBMF(new Resource("OpenSans-Regular-16.bf4"));
 let bold28 = parseBMF(new Resource("OpenSans-Semibold-28.bf4"));

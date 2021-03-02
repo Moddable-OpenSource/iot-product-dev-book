@@ -15,8 +15,9 @@
 import Poco from "commodetto/Poco";
 import Resource from "Resource";
 import parseBMP from "commodetto/parseBMP";
+import config from "mc/config";
 
-let poco = new Poco(screen);
+let poco = new Poco(screen, {rotation: config.rotation});
 let black = poco.makeColor(0, 0, 0);
 let white = poco.makeColor(255, 255, 255);
 

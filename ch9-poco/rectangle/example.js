@@ -13,8 +13,9 @@
  */
 
 import Poco from "commodetto/Poco";
+import config from "mc/config";
 
-let poco = new Poco(screen);
+let poco = new Poco(screen, {rotation: config.rotation});
 let white = poco.makeColor(255, 255, 255);
 poco.begin();
 	poco.fillRectangle(white, 0, 0, poco.width, poco.height);

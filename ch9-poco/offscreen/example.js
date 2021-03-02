@@ -15,11 +15,12 @@
 import Poco from "commodetto/Poco";
 import Timer from "timer";
 import BufferOut from "commodetto/BufferOut";
+import config from "mc/config";
 
-let poco = new Poco(screen);
+let poco = new Poco(screen, {rotation: config.rotation});
 
 let offscreen = new BufferOut({width: 64, height: 64, pixelFormat: poco.pixelsOut.pixelFormat});
-let pocoOff = new Poco(offscreen);
+let pocoOff = new Poco(offscreen, {rotation: config.rotation});
 pocoOff.begin();
 	for (let i = 64; i >= 1; i--) {
 		let gray = (i * 4) - 1;
