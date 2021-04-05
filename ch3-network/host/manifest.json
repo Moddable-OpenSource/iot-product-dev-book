@@ -16,7 +16,7 @@
 	"modules": {
 		"*": [
 			"./main",
-			"../../loadmod/*",
+			"$(MODULES)/base/modules/*",
 			"$(MODULES)/network/http/*",
 			"$(MODULES)/network/sntp/*",
 			"$(MODULES)/network/websocket/*",

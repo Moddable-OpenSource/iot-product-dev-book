@@ -13,7 +13,7 @@
 	"modules": {
 		"*": [
 			"./main",
-			"../../loadmod/*"
+			"$(MODULES)/base/modules/*"
 		],
 		"pins/pwm": "$(MODULES)/pins/pwm/pwm",
 		"pins/smbus": "$(MODULES)/pins/smbus/smbus"

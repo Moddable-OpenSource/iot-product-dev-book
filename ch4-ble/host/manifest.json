@@ -10,7 +10,7 @@
 	"modules": {
 		"*": [
 			"./main",
-			"../../loadmod/*"
+			"$(MODULES)/base/modules/*"
 		]
 	},
 	"ble":{

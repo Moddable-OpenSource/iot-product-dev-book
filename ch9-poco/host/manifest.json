@@ -9,7 +9,7 @@
 	"modules": {
 		"*": [
 			"./main",
-			"../../loadmod/*"
+			"$(MODULES)/base/modules/*"
 		],
 		"commodetto/readJPEG": "$(COMMODETTO)/commodettoReadJPEG",
 		"commodetto/BufferOut": "$(COMMODETTO)/commodettoBufferOut",

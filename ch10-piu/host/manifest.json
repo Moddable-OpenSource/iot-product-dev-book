@@ -16,7 +16,7 @@
 	"modules": {
 		"*": [
 			"./main",
-			"../../loadmod/*"
+			"$(MODULES)/base/modules/*"
 		]
 	},
 	"resources": {

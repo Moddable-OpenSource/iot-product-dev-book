@@ -12,7 +12,7 @@
  *
  */
 
-import LoadMod from "loadmod";
+import LoadMod from "modules";
 import WiFi from "wifi";
 import Net from "net";
 import config from "mc/config";
@@ -21,11 +21,11 @@ export default function () {
 	if (!LoadMod.has("check") || !LoadMod.has("example"))
 		return trace("Host installed. Ready for mods.\n");
 
-	(LoadMod.load("check"))();
+	(LoadMod.importNow("check"))();
 
 	let credentials;
 	if (LoadMod.has("mod/config")) {
-		credentials = LoadMod.load("mod/config");
+		credentials = LoadMod.importNow("mod/config");
 		if (!credentials.ssid)
 			credentials = undefined;
 	}
@@ -43,7 +43,7 @@ export default function () {
 				trace(`IP address ${Net.get("IP")}\n`);
 				monitor.close();
 
-				LoadMod.load("example");
+				LoadMod.importNow("example");
 				break;
 
 			case WiFi.connected:

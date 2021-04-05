@@ -12,7 +12,7 @@
  *
  */
 
-import LoadMod from "loadmod";
+import LoadMod from "modules";
 import WiFi from "wifi";
 import Net from "net";
 
@@ -20,10 +20,10 @@ export default function () {
 	if (!LoadMod.has("check") || !LoadMod.has("example"))
 		return trace("Host installed. Ready for mods.\n");
 
-	(LoadMod.load("check"))();
+	(LoadMod.importNow("check"))();
 
 	if (LoadMod.has("mod/config")) {
-		const config = LoadMod.load("mod/config");
+		const config = LoadMod.importNow("mod/config");
 		if (config.ssid) {
 			trace(`Wi-Fi trying to connect to "${config.ssid}"\n`);
 
@@ -35,7 +35,7 @@ export default function () {
 						trace(`IP address ${Net.get("IP")}\n`);
 						monitor.close();
 
-						LoadMod.load("example");
+						LoadMod.importNow("example");
 						break;
 
 					case WiFi.connected:
@@ -53,5 +53,5 @@ export default function () {
 			throw new Error(`This example requires Wi-Fi. When executing mcrun specify ssid and password.\n`);
 	}
 
-	LoadMod.load("example");
+	LoadMod.importNow("example");
 }

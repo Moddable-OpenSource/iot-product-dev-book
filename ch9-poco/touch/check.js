@@ -12,13 +12,13 @@
  *
  */
 
-import LoadMod from "loadmod";
+import LoadMod from "modules";
 
 export default function () {
 	if (!LoadMod.has("pins/i2c"))
 		throw new Error("This device does not have an FT6206 touch sensor.")
 
-	const I2C = LoadMod.load("pins/i2c");
+	const I2C = LoadMod.importNow("pins/i2c");
 	const probe = new I2C({
 		hz: 600000,
 		address: 0x38,

@@ -12,14 +12,14 @@
  *
  */
 
-import LoadMod from "loadmod";
+import LoadMod from "modules";
 
 export default function () {
 	if (LoadMod.has("check")) {
-		let check = LoadMod.load("check");
+		let check = LoadMod.importNow("check");
 		check();
 		if (LoadMod.has("example"))
-			LoadMod.load("example");
+			LoadMod.importNow("example");
 	} else {
 		trace("Device flashed. Ready to install apps.\n");
 	}
