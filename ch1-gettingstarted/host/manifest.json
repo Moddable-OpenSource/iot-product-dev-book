@@ -11,6 +11,9 @@
 			"$(MODULES)/base/modules/*"
 		]
 	},
+	"preload": [
+		"modules"
+	],
 	"strip": [],
 	"build": {
 		"NAME": "ch1host"

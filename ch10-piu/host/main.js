@@ -13,7 +13,7 @@
  */
  
 import {} from "piu/MC"
-import LoadMod from "modules";
+import Modules from "modules";
 import Timer from "timer";
 
 const textStyle = new Style({
@@ -27,11 +27,11 @@ const readyText = new Label(null, {
 
 class AppBehavior extends Behavior {
 	onCreate(app) {
-		if (LoadMod.has("check")) {
-			let check = LoadMod.importNow("check");
+		if (Modules.has("check")) {
+			let check = Modules.importNow("check");
 			check();
-			if (LoadMod.has("example"))
-				Timer.set(() => LoadMod.importNow("example"));
+			if (Modules.has("example"))
+				Timer.set(() => Modules.importNow("example"));
 		} else {
 			app.add(readyText);
 		}

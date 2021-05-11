@@ -35,7 +35,8 @@
 		"base64",
 		"digest",
 		"logical",
-		"mqtt"
+		"mqtt",
+		"modules"
 	],
 	"strip": [
 		"Atomics",

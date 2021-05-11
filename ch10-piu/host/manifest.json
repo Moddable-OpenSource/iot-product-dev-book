@@ -19,6 +19,9 @@
 			"$(MODULES)/base/modules/*"
 		]
 	},
+	"preload": [
+		"modules"
+	],
 	"resources": {
 		"*-alpha": [
 			"./OpenSans-Regular-24",

@@ -15,6 +15,9 @@
 		"commodetto/BufferOut": "$(COMMODETTO)/commodettoBufferOut",
 		"commodetto/PixelsOut": "$(COMMODETTO)/commodettoPixelsOut"
 	},
+	"preload": [
+		"modules"
+	],
 	"resources": {
 		"*-mask": [
 			"./OpenSans-Regular-16",

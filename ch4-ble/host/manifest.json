@@ -13,6 +13,9 @@
 			"$(MODULES)/base/modules/*"
 		]
 	},
+	"preload": [
+		"modules"
+	],
 	"ble":{
 		"*": [
 			"./bleservices/*"

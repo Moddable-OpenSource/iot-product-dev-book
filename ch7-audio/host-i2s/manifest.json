@@ -12,6 +12,9 @@
 		],
 		"pins/audioout": "$(MODULES)/pins/i2s/*"
 	},
+	"preload": [
+		"modules"
+	],
 	"resources": {
 		"*": [
 			"./bflatmajor",

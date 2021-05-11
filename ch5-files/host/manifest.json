@@ -16,7 +16,8 @@
 		]
 	},
 	"preload": [
-		"http"
+		"http",
+		"modules"
 	],
 	"platforms": {
 		"esp": {
