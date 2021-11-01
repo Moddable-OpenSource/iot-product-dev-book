@@ -90,6 +90,35 @@ server.callback = function(msg, value) {
 
 ***
 
+### Page 169
+
+The [`websocket-client` example](ch3-network/websocket-client) originally connected to the server at `echo.websocket.org`. This service is no longer available, so the example now connects to `websockets.chilkat.io`.
+
+This code snippet on page 169 no longer matches the `websocket-client` example:
+
+```js
+let ws = new Client({
+    host: "echo.websocket.org"
+});
+```
+
+It should be as follows:
+
+```js
+let ws = new Client({
+	host: "websockets.chilkat.io", 
+	path: "/wsChilkatEcho.ashx"
+});
+```
+
+In addition, the following sentence is no longer accurate:
+
+> This process repeats indefinitely, with count increasing each time.
+
+The server at `websockets.chilkat.io` limits each connection to a maximum of 16 echoed messages. After the 16th message, it disconnects from the client.
+
+***
+
 ### Page 193-200
 
 The **Creating Two-Way Communication** section explains how to use the Bluefruit mobile app to create a peripheral. However, the Bluefruit mobile app no longer has the **Peripheral Mode** feature described in the text, so the instructions in this section are no longer valid.

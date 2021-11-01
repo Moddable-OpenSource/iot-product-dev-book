@@ -15,7 +15,8 @@
 import {Client} from "websocket";
 
 let ws = new Client({
-	host: "echo.websocket.org"
+	host: "websockets.chilkat.io", 
+	path: "/wsChilkatEcho.ashx"
 });
 
 ws.callback = function(msg, value) {
