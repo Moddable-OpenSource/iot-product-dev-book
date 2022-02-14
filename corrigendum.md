@@ -144,6 +144,24 @@ The devices will automatically pair, and the `text-client` will subscribe to not
 
 ***
 
+### Page 243
+
+In this example, the second parameter to `slice` is incorrect.
+
+```
+let r1 = new Resource("myData.dat");
+let values = new Uint16Array(r1.slice(32, 10, false));
+```
+
+The second parameter is the end position of the slice, not the byte length of the slice. The correct code is:
+
+```
+let r1 = new Resource("myData.dat");
+let values = new Uint16Array(r1.slice(32, 32 + 10, false));
+```
+
+***
+
 ### Page 266
 
 The **Monitoring for Changes** section does not provide the import statement for the `Monitor` class used in Listing 6-5.
