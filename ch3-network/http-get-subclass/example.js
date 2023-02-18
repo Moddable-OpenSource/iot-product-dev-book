@@ -25,7 +25,7 @@ class WeatherRequest extends Request {
 		});
 	}
 	callback(msg, value) {
-		if (Request.responseComplete == msg) {
+		if (Request.responseComplete === msg) {
 			value = JSON.parse(value, 
 					["main", "name", "temp", "weather"]);
 			this.onReceived({

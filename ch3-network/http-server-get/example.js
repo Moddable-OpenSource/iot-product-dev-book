@@ -16,11 +16,11 @@ import {Server} from "http";
 
 let server = new Server({port: 80});
 server.callback = function(msg, value, etc) {
-	if (Server.status == msg) {
+	if (Server.status === msg) {
 		this.path = value;
 		this.method = etc;
 	}
-	else if (Server.prepareResponse == msg)
+	else if (Server.prepareResponse === msg)
 		return {
 			headers: ["Content-Type", "text/plain"],
 			body: `hello. path "${this.path}". method "${this.method}".`

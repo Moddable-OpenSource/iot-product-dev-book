@@ -73,7 +73,7 @@ class HeartRateService extends BLEServer {
 	}
 	onCharacteristicRead(params) {
 		if (params.name === "battery") {
-			if (this.battery == 0) this.battery = 100;
+			if (this.battery === 0) this.battery = 100;
 			return this.battery--;
 		}
 	}

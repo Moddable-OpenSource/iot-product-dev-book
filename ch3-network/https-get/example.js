@@ -24,6 +24,6 @@ let request = new Request({
 });
 
 request.callback = function(msg, value) {
-	if (Request.responseComplete == msg)
+	if (Request.responseComplete === msg)
 		trace(value, "\n");
 }

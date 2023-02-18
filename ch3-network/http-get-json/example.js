@@ -26,7 +26,7 @@ let request = new Request({
 });
 
 request.callback = function(msg, value) {
-	if (Request.responseComplete == msg) {
+	if (Request.responseComplete === msg) {
 		value = JSON.parse(value);
 		trace(`Location: ${value.name}\n`);
 		trace(`Temperature: ${value.main.temp} F\n`);

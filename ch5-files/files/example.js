@@ -50,7 +50,7 @@ trace("\n");
 let iterator = new Iterator(root);
 let item;
 while (item = iterator.next()) {
-	if (undefined == item.length)
+	if (undefined === item.length)
 		trace(`${item.name.padEnd(32)} directory\n`);
 	else
 		trace(`${item.name.padEnd(32)} file ${item.length} bytes\n`);

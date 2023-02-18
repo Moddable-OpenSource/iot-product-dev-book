@@ -27,7 +27,7 @@ WiFi.scan({}, accessPoint => {
 		return;
 	}
 
-	if ("none" != accessPoint.authentication)
+	if ("none" !== accessPoint.authentication)
 		return;	// not open
 	
 	if (!best) {

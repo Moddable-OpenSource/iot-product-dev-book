@@ -46,7 +46,7 @@ class TextServer extends BLEServer {
 	    	this.text = strings[index];
 	        this.notifyValue(characteristic, this.text);
 	        index++;
-	        if (index == strings.length)
+	        if (index === strings.length)
 	            index = 0;
 	    }, 1000);
 	}
