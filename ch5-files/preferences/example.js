@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2020 Moddable Tech, Inc.
+ * Copyright (c) 2016-2023 Moddable Tech, Inc.
  *
  *   This file is part of the Moddable SDK.
  * 
@@ -27,4 +27,4 @@ let d = Preference.get("example", "arraybuffer"); // ArrayBuffer of [1, 2, 3]
 trace(`boolean: ${a}\n`);
 trace(`integer: ${b}\n`);
 trace(`string: ${c}\n`);
-trace(`arraybuffer: ${d}\n`);
+trace(`arraybuffer: ${new Uint8Array(d)}\n`);
