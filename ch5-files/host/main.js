@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2020 Moddable Tech, Inc.
+ * Copyright (c) 2016-2023 Moddable Tech, Inc.
  *
  *   This file is part of the Moddable SDK.
  * 
@@ -13,8 +13,6 @@
  */
 
 import Modules from "modules";
-import WiFi from "wifi";
-import Net from "net";
 
 export default function () {
 	if (!Modules.has("check") || !Modules.has("example"))
@@ -22,7 +20,9 @@ export default function () {
 
 	(Modules.importNow("check"))();
 
-	if (Modules.has("mod/config")) {
+	if (Modules.has("wifi") && Modules.has("net") && Modules.has("mod/config")) {
+		const WiFi = Modules.importNow("wifi");
+		const Net = Modules.importNow("net");
 		const config = Modules.importNow("mod/config");
 		if (config.ssid) {
 			trace(`Wi-Fi trying to connect to "${config.ssid}"\n`);

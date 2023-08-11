@@ -1,19 +1,16 @@
 {
 	"include": [
-		"$(MODDABLE)/examples/manifest_base.json"
+		"$(MODDABLE)/examples/manifest_base.json",
+		"$(MODDABLE)/modules/base/modules/manifest.json"
 	],
 	"defines": {
 		"XS_MODS": 1
 	},
 	"modules": {
 		"*": [
-			"./main",
-			"$(MODULES)/base/modules/*"
+			"./main"
 		]
 	},
-	"preload": [
-		"modules"
-	],
 	"strip": [],
 	"build": {
 		"NAME": "ch1host"

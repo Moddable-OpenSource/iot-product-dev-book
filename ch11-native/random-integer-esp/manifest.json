@@ -4,7 +4,8 @@
 	],
 	"modules": {
 		"*": [
-			"./main"
+			"./main",
+			"./randominteger"
 		]
 	}
 }

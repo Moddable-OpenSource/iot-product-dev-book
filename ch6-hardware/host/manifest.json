@@ -5,7 +5,9 @@
 		"$(MODULES)/pins/digital/monitor/manifest.json",
 		"$(MODULES)/pins/analog/manifest.json",
 		"$(MODULES)/pins/servo/manifest.json",
-		"$(MODULES)/pins/i2c/manifest.json"
+		"$(MODULES)/pins/i2c/manifest.json",
+		"$(MODULES)/pins/pwm/manifest.json",
+		"$(MODULES)/pins/smbus/manifest.json"
 	],
 	"defines": {
 		"XS_MODS": 1
@@ -14,18 +16,13 @@
 		"*": [
 			"./main",
 			"$(MODULES)/base/modules/*"
-		],
-		"pins/pwm": "$(MODULES)/pins/pwm/pwm",
-		"pins/smbus": "$(MODULES)/pins/smbus/smbus"
+		]
 	},
 	"preload": [
 		"modules"
 	],
 	"platforms": {
 		"esp": {
-			"modules": {
-				"*": "$(MODULES)/pins/pwm/esp/*"
-			},
 			"defines": {
 				"i2c": {
 					"sda_pin": 5,
@@ -34,13 +31,18 @@
 			}
 		},
 		"esp32": {
-			"modules": {
-				"*": "$(MODULES)/pins/pwm/esp32/*"
-			},
 			"defines": {
 				"i2c": {
 					"sda_pin": 21,
 					"scl_pin": 22
+				}
+			}
+		},
+		"nrf52": {
+			"defines": {
+				"i2c": {
+					"sda_pin": 26,
+					"scl_pin": 27
 				}
 			}
 		},

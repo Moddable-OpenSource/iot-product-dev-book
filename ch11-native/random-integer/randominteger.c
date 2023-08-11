@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2020 Moddable Tech, Inc.
+ * Copyright (c) 2016-2023 Moddable Tech, Inc.
  *
  *   This file is part of the Moddable SDK.
  * 
@@ -13,6 +13,7 @@
  */
 
 #include "xsmc.h"
+#include "xsHost.h"
 
 void xs_randomInt(xsMachine *the)
 {

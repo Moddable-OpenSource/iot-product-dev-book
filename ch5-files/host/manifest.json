@@ -1,46 +1,49 @@
 {
 	"include": [
 		"$(MODDABLE)/examples/manifest_base.json",
-		"$(MODDABLE)/examples/manifest_net.json",
+		"$(MODDABLE)/modules/files/preference/manifest.json",
+		"$(MODDABLE)/modules/files/flash/manifest.json",
 		"$(MODDABLE)/modules/files/file/manifest.json",
-		"$(MODDABLE)/modules/files/preference/manifest.json"
+		"$(MODDABLE)/modules/base/modules/manifest.json"
 	],
 	"defines": {
 		"XS_MODS": 1
 	},
 	"modules": {
-		"*": [
-			"./main",
-			"$(MODULES)/base/modules/*",
-			"$(MODULES)/network/http/*"
-		]
+		"*": "./main"
 	},
-	"preload": [
-		"http",
-		"modules"
-	],
 	"platforms": {
+		"sim": {
+			"include": "$(MODDABLE)/examples/manifest_net.json"
+		},
 		"esp": {
+			"include": [
+				"$(MODDABLE)/examples/manifest_net.json",
+				"$(MODDABLE)/modules/network/http/manifest.json"
+			],
 			"modules": {
-				"*": [
-					"$(MODULES)/files/flash/*",
-					"$(MODULES)/files/flash/esp/*"
-				],
 				"~": [
 					"$(BUILD)/devices/esp/setup/network"
 				]
 			}
 		},
 		"esp32": {
-			"modules": {
-				"*": [
-					"$(MODULES)/files/flash/*",
-					"$(MODULES)/files/flash/esp32/*"
+				"include": [
+					"$(MODDABLE)/examples/manifest_net.json",
+					"$(MODDABLE)/modules/network/http/manifest.json"
 				],
 				"~": [
 					"$(BUILD)/devices/esp32/setup/network"
 				]
-			}
+		},
+		"pico": {
+				"include": [
+					"$(MODDABLE)/examples/manifest_net.json",
+					"$(MODDABLE)/modules/network/http/manifest.json"
+				],
+				"~": [
+					"$(BUILD)/devices/pico/setup/network"
+				]
 		}
 	},
 	"strip": [],

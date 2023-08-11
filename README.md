@@ -9,7 +9,7 @@ by Peter Hoddie and Lizzie Prader
 
 This repository contains the source code for example apps from *IoT Development for ESP32 and ESP8266 with JavaScript*.
 
-You can purchase the book [here](https://www.keplers.com/book/9781484250693).
+You can purchase the book from [Keplers Books](https://www.keplers.com/book/9781484250693), [Amazon](https://www.amazon.com/IoT-Development-ESP8266-ESP32-JavaScript/dp/1484250699/ref=sr_1_2), and [Moddable](https://www.moddable.com/book#purchase).
 
 ## Table of Contents
 
@@ -40,6 +40,15 @@ You can purchase the book [here](https://www.keplers.com/book/9781484250693).
 
 * [Moddable website](https://www.moddable.com)
 * [Moddable SDK](https://github.com/Moddable-OpenSource/moddable/)
+
+<a id="nrf52"></a>
+## Nordic nRF52 Support!
+
+The Moddable SDK 4.0 has added support for the Nordic nRF52 microcontroller. The ultra-low power nRF52 with integrated BLE allows projects to run on a coin cell battery.
+
+The Moddable SDK APIs are compatible across ESP32, ESP8266, and nRF52 microcontrollers. Therefore, the majority of the content of our book applies to nRF52 too. However, networking (Chapter 3) and audio (chapter 6) are not available on nRF52.
+
+[Moddable Four](https://www.moddable.com/moddable-four) is an nRF52 development board with BLE, a display, jog dial, and accelerometer. It is a great place to explore nRF52 development in JavaScript.
 
 ## Questions? We're here to help
 
