@@ -28,6 +28,7 @@
 		"esp": {
 			"defines": {
 				"audioOut": {
+					"streams": 2,
 					"bitsPerSample": 16,
 					"numChannels": 1,
 					"sampleRate": 11025,
@@ -41,6 +42,7 @@
 		"esp32": {
 			"defines": {
 				"audioOut": {
+					"streams": 2,
 					"bitsPerSample": 16,
 					"numChannels": 1,
 					"sampleRate": 11025,
