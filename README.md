@@ -41,6 +41,10 @@ You can purchase the book from [Keplers Books](https://www.keplers.com/book/9781
 * [Moddable website](https://www.moddable.com)
 * [Moddable SDK](https://github.com/Moddable-OpenSource/moddable/)
 
+<a id="moddablesix"></a>
+## Moddable Six Support!
+[Moddable Six](https://www.moddable.com/moddable-six) is an  advanced display powered by the ESP32-S3. It is fully compatible with the examples in our book. This powerful development board replaces Moddable Two. Moddable Six includes a built-in speaker, so you easily use the audio examples in Chapter 7. It also features a faster display, more responsive touch, more RAM, and larger flash storage.
+
 <a id="nrf52"></a>
 ## Nordic nRF52 Support!
 
