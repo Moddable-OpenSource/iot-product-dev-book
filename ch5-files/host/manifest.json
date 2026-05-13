@@ -19,7 +19,8 @@
 		"esp": {
 			"include": [
 				"$(MODDABLE)/examples/manifest_net.json",
-				"$(MODDABLE)/modules/network/http/manifest.json"
+				"$(MODDABLE)/modules/network/http/manifest.json",
+				"$(MODDABLE)/modules/network/wifi/manifest.json"
 			],
 			"modules": {
 				"~": [
@@ -30,7 +31,8 @@
 		"esp32": {
 				"include": [
 					"$(MODDABLE)/examples/manifest_net.json",
-					"$(MODDABLE)/modules/network/http/manifest.json"
+					"$(MODDABLE)/modules/network/http/manifest.json",
+					"$(MODDABLE)/modules/network/wifi/manifest.json"
 				],
 				"~": [
 					"$(BUILD)/devices/esp32/setup/network"
@@ -39,7 +41,8 @@
 		"pico": {
 				"include": [
 					"$(MODDABLE)/examples/manifest_net.json",
-					"$(MODDABLE)/modules/network/http/manifest.json"
+					"$(MODDABLE)/modules/network/http/manifest.json",
+					"$(MODDABLE)/modules/network/wifi/manifest.json"
 				],
 				"~": [
 					"$(BUILD)/devices/pico/setup/network"
